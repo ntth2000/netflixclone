@@ -1,0 +1,227 @@
+.register-planform {
+  width: 90%;
+  margin: 20px auto;
+  .register-planform-top {
+    margin-bottom: 30px;
+    .register-planform-stepNum {
+      font-size: 13px;
+      text-transform: uppercase;
+      b {
+        font-weight: 600;
+      }
+    }
+    .register-planform-title {
+      color: #222;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .register-planform-desc {
+      color: #222;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      .register-planform-desc-icon {
+        color: #e50914;
+        margin-right: 5px;
+      }
+    }
+  }
+  .register-planform-plan {
+    margin-bottom: 20px;
+    .register-planform-table {
+      display: flex;
+      flex-direction: column;
+      .planform-table-top {
+        padding: 5px 0;
+        position: sticky;
+        top: 0;
+        cursor: default;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        background-color: white;
+        .planform-table-top-title {
+          display: none;
+        }
+        .planform-table-top-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: calc((100% - 20px) / 4);
+          &.active {
+            .planform-table-top-item-name {
+              background-color: #e6151f;
+              -webkit-box-shadow: 0px 0px 7px 0px rgba(230, 21, 31, 0.67);
+              box-shadow: 0px 0px 7px 0px rgba(230, 21, 31, 0.67);
+            }
+          }
+          .planform-table-top-item-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            height: 80px;
+            color: white;
+            font-weight: 400;
+            background-color: #e94850;
+            border-radius: 3px;
+            font-size: 13px;
+          }
+        }
+      }
+      .planform-table-item {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        &.device {
+          border-bottom: none;
+          div {
+            display: flex;
+            flex-direction: row;
+            .planform-table-item-option {
+              display: flex;
+              flex-direction: column;
+              .planform-table-device-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 13px;
+                margin-bottom: 10px;
+                p {
+                  display: flex;
+                  justify-content: center;
+                }
+              }
+            }
+          }
+        }
+        .planform-table-item-title {
+          text-align: center;
+          color: rgb(70, 70, 70);
+          margin: 10px 0;
+          font-size: 13px;
+        }
+        div {
+          display: flex;
+          .planform-table-item-option {
+            width: 120px;
+            flex: 1;
+            color: rgb(88, 88, 88);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 13px;
+            &.active {
+              color: #e6151f;
+            }
+          }
+        }
+      }
+    }
+    .register-planform-note {
+      p {
+        color: rgb(88, 88, 88);
+        font-size: 13px;
+        width: 100%;
+        a {
+          margin: 0px 4px;
+          color: #0071eb;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .register-planform-bottom {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 160px;
+    .register-planform-button {
+      width: 100%;
+      max-width: 400px;
+      border: none;
+      color: white;
+      background-color: #e50914;
+      padding: 10px;
+      border-radius: 2px;
+      font-size: 18px;
+      cursor: pointer;
+      &:hover {
+        background-color: #e6151f;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .register-planform {
+    width: 85%;
+    max-width: 950px;
+    .register-planform-plan {
+      .register-planform-table {
+        .planform-table-top {
+          .planform-table-top-title {
+            display: block;
+            flex: 2;
+          }
+          .planform-table-top-item {
+            width: auto;
+            flex: 1;
+            .planform-table-top-item-name {
+              width: 90px;
+              height: 90px;
+              font-size: 16px;
+              font-weight: 500;
+            }
+          }
+        }
+        .planform-table-item {
+          flex-direction: row;
+          .planform-table-item-title {
+            width: calc(100% / 3);
+            margin: 20px 0;
+            font-size: 15px;
+            text-align: left;
+          }
+          div {
+            width: calc(200% / 3);
+            .planform-table-item-option {
+              align-items: center;
+              flex-basis: 25%;
+              margin: 20px 0;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .register-planform-note {
+        p {
+          width: 90%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .register-planform {
+    .register-planform-plan {
+      .register-planform-table {
+        .planform-table-top {
+          .planform-table-top-item {
+            .planform-table-top-item-name {
+              width: 120px;
+              height: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

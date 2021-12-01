@@ -1,0 +1,14 @@
+.home {
+  background: var(--main-color);
+  position: relative;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  .listContainer {
+    position: relative;
+    top: -13vw;
+  }
+  .home-footer-wrapper {
+    padding: 100px 4% 20px 4%;
+  }
+}

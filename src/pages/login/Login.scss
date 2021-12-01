@@ -1,0 +1,105 @@
+.login {
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/9b3267c9-5086-4550-92f1-eddc22a1f78e/57241e85-65de-46d2-9785-c41a30fc3a89/VN-en-20211004-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    img {
+      height: 35px;
+    }
+  }
+  .main {
+    width: 100%;
+    height: 100vh;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card {
+      width: 380px;
+      background-color: rgba(0, 0, 0, 0.74);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 50px 80px;
+      h1 {
+        color: white;
+        font-weight: 600;
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        input {
+          padding: 15px 25px;
+          background-color: rgb(54, 54, 54);
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-weight: 300;
+          margin-bottom: 15px;
+          &::placeholder {
+            color: rgb(160, 158, 158);
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        button {
+          height: 45px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      div {
+        color: rgb(160, 158, 158);
+        font-size: 13px;
+        .first {
+          font-size: 15px;
+          margin-bottom: 10px;
+          a {
+            cursor: pointer;
+            font-weight: 500;
+            color: white;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .last {
+          a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.911);
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

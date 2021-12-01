@@ -1,0 +1,91 @@
+.register-payment {
+  height: calc(100vh - 80px);
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  .register-payment-main {
+    margin-top: 40px;
+    max-width: 500px;
+    width: 100%;
+    .register-payment-top {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      img {
+        width: 50px;
+      }
+    }
+    .register-payment-middle {
+      text-align: center;
+      .register-payment-stepNum {
+        font-size: 13px;
+        text-transform: uppercase;
+        b {
+          font-weight: 600;
+        }
+      }
+      .register-payment-title {
+        color: #222;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+      .register-payment-desc {
+        color: #222;
+        margin-bottom: 5px;
+        margin-bottom: 20px;
+        &.second {
+          font-weight: 600;
+        }
+      }
+    }
+    .register-payment-bottom {
+      .register-payment-bottom-secure {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 400;
+        .register-payment-bottom-secure-icon {
+          font-size: 14px;
+          color: rgb(233, 151, 0);
+        }
+      }
+      .register-payment-bottom-card {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid rgb(189, 189, 189);
+        border-radius: 4px;
+        padding: 20px 15px;
+        .register-payment-bottom-card-first {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .register-payment-bottom-card-img {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            img {
+              margin-right: 5px;
+              width: 40px;
+            }
+          }
+        }
+        p {
+          justify-self: flex-end;
+          align-self: flex-end;
+          .register-payment-bottom-next-icon {
+            display: flex;
+            align-items: center;
+            color: rgb(189, 189, 189);
+          }
+        }
+      }
+    }
+  }
+}

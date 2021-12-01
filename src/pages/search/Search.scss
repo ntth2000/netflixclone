@@ -1,0 +1,106 @@
+.searchPage {
+  background-color: var(--main-color);
+  position: relative;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  .searchPageContainer {
+    min-height: 100vh;
+    padding: 70px 4% 0;
+    box-sizing: border-box;
+    .searchPage-Loadingspinner {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .searchpage-notfound {
+      display: flex;
+      justify-content: center;
+      padding-top: 80px;
+      .searchpage-notfound-wrapper {
+        width: max-content;
+        p {
+          font-size: 9px;
+          margin-bottom: 12px;
+          &:last-child {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+    .searchpage-found {
+      .searchpage-found-title {
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      .searchpage-found-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5px;
+        row-gap: 40px;
+      }
+    }
+  }
+}
+@media (min-width: 576px) {
+  .searchPage {
+    .searchPageContainer {
+      padding: 80px 4% 0 !important;
+      .searchpage-notfound {
+        display: flex;
+        justify-content: center;
+        padding-top: 80px;
+        .searchpage-notfound-wrapper {
+          p {
+            font-size: 9px;
+            margin-bottom: 12px;
+            &:last-child {
+              padding-left: 25px;
+            }
+          }
+        }
+      }
+      .searchpage-found {
+        .searchpage-found-title {
+          font-size: 24px;
+        }
+        .searchpage-found-wrapper {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .searchPage {
+    .searchPageContainer {
+      padding: 90px 4% 0 !important;
+
+      .searchpage-found {
+        .searchpage-found-title {
+          font-size: 28px;
+        }
+        .searchpage-found-wrapper {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .searchPage {
+    .searchPageContainer {
+      padding: 105px 4% 0 !important;
+      .searchpage-found {
+        .searchpage-found-title {
+          font-size: 32px;
+        }
+        .searchpage-found-wrapper {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+    }
+  }
+}

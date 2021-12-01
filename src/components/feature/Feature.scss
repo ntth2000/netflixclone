@@ -1,0 +1,245 @@
+.feature {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 16/9;
+  .feature-loadingspinner {
+    width: 100%;
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .genre {
+    /* width */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    position: absolute;
+    top: 40px;
+    margin-left: 4%;
+    display: flex;
+    align-items: center;
+    .genreLabel {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 500;
+      margin-right: 5px;
+    }
+    .genreSelect {
+      font-size: 9px;
+      width: 100px;
+      margin-left: 5px;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.445);
+      .genreOption {
+        font-size: 9px;
+        background-color: rgba(255, 255, 255, 0.445);
+        text-transform: capitalize;
+      }
+    }
+  }
+  .infor {
+    position: absolute;
+    width: 70%;
+    left: 4%;
+    bottom: 16.5vw;
+    .title {
+      width: 100%;
+      margin-bottom: 10px;
+      color: white;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .desc {
+      max-width: 250px;
+      margin-bottom: 10px;
+      font-size: 9px;
+      word-wrap: break-word;
+      line-height: 1.5em;
+      max-height: 4.5em;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .buttons {
+      display: flex;
+      button {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 9px;
+        cursor: pointer;
+        &.play-button {
+          margin-right: 5px;
+          .play-button-icon {
+            font-size: 14px;
+            margin-right: 2px;
+          }
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+          }
+        }
+        &.add-button {
+          .add-button-icon {
+            font-size: 14px;
+            margin-right: 2px;
+          }
+          color: white;
+          background-color: rgba(109, 109, 110, 0.7);
+          &:hover {
+            background-color: rgba(109, 109, 110, 0.4);
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 576px) {
+  .feature {
+    .genre {
+      top: 50px;
+      .genreLabel {
+        font-size: 24px;
+      }
+      .genreSelect {
+        width: 130px;
+        font-size: 12px;
+        .genreOption {
+          font-size: 12px;
+        }
+      }
+    }
+    .infor {
+      .title {
+        font-size: 28px;
+      }
+      .desc {
+        margin-bottom: 14px;
+        font-size: 12px;
+        max-width: 300px;
+      }
+      .buttons {
+        button {
+          padding: 3px 10px;
+
+          font-size: 12px;
+          &.play-button {
+            .play-button-icon {
+              font-size: 16px;
+            }
+          }
+          &.add-button {
+            .add-button-icon {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .feature {
+    .genre {
+      top: 60px;
+      .genreLabel {
+        font-size: 26px;
+        .genreSelect {
+          font-size: 16px;
+        }
+      }
+    }
+    .infor {
+      .title {
+        font-size: 32px;
+        font-weight: 600;
+      }
+      .desc {
+        font-size: 14px;
+        max-width: 400px;
+      }
+      .buttons {
+        button {
+          padding: 5px 14px;
+          font-size: 14px;
+          &.play-button {
+            margin-right: 10px;
+            .play-button-icon {
+              font-size: 18px;
+            }
+          }
+          &.add-button {
+            .add-button-icon {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .feature {
+    .genre {
+      top: 80px;
+      .genreLabel {
+        font-size: 30px;
+      }
+    }
+    .infor {
+      .title {
+        margin-bottom: 20px;
+        font-size: 46px;
+        font-weight: 700;
+      }
+      .desc {
+        margin-bottom: 20px;
+        font-size: 18px;
+        max-width: 500px;
+        box-sizing: border-box;
+      }
+      .buttons {
+        button {
+          padding: 7px 20px;
+          border-radius: 5px;
+          font-weight: 500;
+          font-size: 15px;
+          &.play-button {
+            .play-button-icon {
+              font-size: 20px;
+            }
+          }
+          &.add-button {
+            .add-button-icon {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

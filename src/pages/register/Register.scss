@@ -1,0 +1,565 @@
+.register {
+  background: #000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .home {
+    border-bottom: 10px solid #222;
+    width: 100%;
+    height: 75vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.45) 50%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("https://assets.nflxext.com/ffe/siteui/vlv3/9b3267c9-5086-4550-92f1-eddc22a1f78e/57241e85-65de-46d2-9785-c41a30fc3a89/VN-en-20211004-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .register-home-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      margin: 0 25px;
+      z-index: 999;
+      img {
+        height: 24px;
+      }
+    }
+    .main {
+      width: 100%;
+      height: calc(75vh - 80px);
+      position: absolute;
+      top: 80px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      div {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: white;
+        h1 {
+          line-height: 1.3;
+          font-size: 26px;
+          font-weight: 600;
+        }
+        h2 {
+          font-weight: 400;
+          margin: 20px;
+          font-size: 18px;
+        }
+        p {
+          width: 90%;
+          font-size: 16px;
+        }
+        .input {
+          margin-top: 10px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          div {
+            input {
+              box-sizing: border-box;
+              padding-left: 10px;
+              height: 46px;
+              width: 100%;
+              color: var(--main-color);
+              &:focus {
+                outline: none;
+              }
+            }
+            p {
+              display: none;
+              width: 100%;
+              text-align: left;
+              color: orange;
+              font-size: 13px;
+            }
+          }
+          .registerButton {
+            margin-top: 10px;
+            border: none;
+            height: 100%;
+            background: var(--button-color);
+            color: white;
+            font-size: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 3px;
+            padding: 8px 14px;
+            &:hover {
+              background-color: #f50814;
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    min-height: 75vh;
+    padding: 0 8%;
+    border-bottom: 10px solid #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 36px 15px 48px !important;
+    &.watchEverywhere {
+      min-height: 0;
+      height: auto !important;
+    }
+    .col-1 {
+    }
+    .text {
+      width: 100%;
+      text-align: center;
+      color: white;
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+    .col-2 {
+      &.converseOrder {
+        order: -1;
+      }
+    }
+    .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 90%;
+      }
+    }
+  }
+  .FAQ {
+    padding: 50px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    .QAs {
+      width: 100%;
+      font-size: 17px;
+      margin-bottom: 18px;
+      .QA {
+        margin-bottom: 8px;
+        .question {
+          background: rgb(54, 54, 54);
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px 18px;
+          border-bottom: 1px solid #000;
+          cursor: pointer;
+        }
+        .answer {
+          padding: 0 30px;
+          background: rgb(54, 54, 54);
+          display: grid;
+          row-gap: 18px;
+          max-height: 0px;
+          overflow: hidden;
+          transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1),
+            padding 0.25s;
+          &.active {
+            padding: 16px 18px;
+            max-height: 1200px;
+          }
+        }
+      }
+    }
+    .FAQ-input {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        text-align: center;
+        width: 70% !important;
+      }
+      div {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        div {
+          input {
+            box-sizing: border-box;
+            padding-left: 10px;
+            height: 46px;
+            width: 90%;
+            color: var(--main-color);
+            margin-bottom: 10px;
+            &:focus {
+              outline: none;
+            }
+          }
+          p {
+            display: none;
+            width: 90% !important;
+            text-align: left;
+            color: orange;
+            font-size: 13px;
+          }
+        }
+        .registerButton {
+          border: none;
+          height: 100%;
+          background: var(--button-color);
+          color: white;
+          font-size: 16px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          border-radius: 3px;
+          padding: 8px 14px;
+          &:hover {
+            background-color: #f50814;
+          }
+        }
+      }
+    }
+  }
+  .register-footer {
+    border-top: solid 10px #222;
+    color: gray;
+    font-size: 13px;
+    padding: 50px 10%;
+    .register-footer-top {
+      font-size: 15px;
+      margin-bottom: 25px;
+      .register-footer-top-link {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .register-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      justify-content: space-between;
+      .register-footer-container {
+        flex-basis: 40%;
+        margin-bottom: 15px;
+        .register-footer-link {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 576px) {
+  .register {
+    .home {
+      height: 100vh;
+      .register-home-header {
+        height: 100px;
+        margin: 0 50px;
+        img {
+          height: 35px;
+        }
+      }
+      .main {
+        width: 90%;
+        height: calc(100vh - 100px);
+        top: 100px;
+        left: 5% !important;
+        div {
+          h1 {
+            font-size: 48px;
+          }
+          h2 {
+            font-size: 24px;
+          }
+          .input {
+            max-width: 665px;
+          }
+        }
+      }
+    }
+    .container {
+      .text {
+        box-sizing: border-box;
+        padding: 0px 10%;
+      }
+    }
+    .FAQ {
+      padding-bottom: 70px;
+      h1 {
+      }
+      .QAs {
+        width: 80%;
+        margin-bottom: 50px;
+        font-size: 18px;
+        .QA {
+          .question {
+            padding: 16px 22px;
+          }
+          .answer {
+            &.active {
+              padding: 16px 18px;
+              padding: 16px 22px;
+            }
+          }
+        }
+      }
+      .FAQ-input {
+        p {
+          width: 70% !important;
+        }
+        div {
+          max-width: 575px;
+          width: 90%;
+        }
+      }
+    }
+    .register-footer {
+      .register-footer-links {
+        .register-footer-container {
+          flex-basis: 32%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .register {
+    .home {
+      .register-home-header {
+        img {
+        }
+      }
+    }
+    .container {
+      .text {
+        padding: 0 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          line-height: 1.3;
+          font-size: 36px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        h2 {
+          font-weight: 400;
+          font-size: 24px;
+        }
+      }
+      &.watchEverywhere {
+        min-height: 50vh;
+        //margin: 50px 0;
+        width: 100%;
+        .text {
+          width: 100%;
+        }
+      }
+    }
+    .FAQ {
+      h1 {
+        font-size: 36px !important;
+      }
+      .QAs {
+        width: 90%;
+      }
+    }
+    .register-footer {
+      padding: 70px 15%;
+      .register-footer-links {
+        justify-content: flex-start;
+        .register-footer-container {
+          flex-basis: 25%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .register {
+    .home {
+      .register-home-header {
+        img {
+        }
+      }
+      .main {
+        box-sizing: border-box;
+        width: 70%;
+        left: 15% !important;
+        padding-bottom: 100px;
+        div {
+          h1 {
+            font-size: 36px;
+            margin-bottom: 24px;
+            width: 100%;
+            max-width: 600px;
+          }
+          h2 {
+          }
+          .input {
+            max-width: 665px;
+            flex-direction: row;
+            align-items: flex-start;
+            min-height: 55px;
+            border-radius: 3px;
+            overflow: hidden;
+            div {
+              flex: 2;
+              input {
+                padding-left: 20px;
+                padding-right: 20px;
+                border: none;
+                margin-bottom: 0;
+                height: 55px !important;
+              }
+            }
+            .registerButton {
+              margin-top: 0;
+              font-size: 24px;
+              flex: 1;
+              border-radius: 0;
+              height: 55px !important;
+              .registerButton-icon {
+                font-size: 32px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .container {
+      flex-direction: row;
+      .col-1 {
+        flex: 1;
+        margin-right: 2rem;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          line-height: 1.3;
+          font-size: 50px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+        h2 {
+          font-weight: 400;
+          font-size: 24px;
+        }
+      }
+      .col-2 {
+        flex: 1;
+        &.converseOrder {
+          order: 1;
+        }
+      }
+      .img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .FAQ {
+      justify-content: center;
+      padding: 50px 18% 100px;
+      h1 {
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+      .QAs {
+        margin-bottom: 50px;
+        font-size: 24px;
+        max-width: 750px;
+        .QA {
+          .question {
+            padding: 20px 30px;
+          }
+          .answer {
+            &.active {
+              padding: 30px 30px;
+              row-gap: 30px;
+            }
+          }
+        }
+      }
+      .FAQ-input {
+        display: flex;
+        justify-content: center !important;
+        div {
+          max-width: 665px;
+          flex-direction: row;
+          min-height: 55px;
+          border-radius: 3px;
+          overflow: hidden;
+          align-items: flex-start;
+          div {
+            margin-top: 0;
+            flex: 2;
+            flex-direction: column;
+            align-items: flex-start;
+            input {
+              padding-left: 20px;
+              padding-right: 20px;
+              border: none;
+              height: 55px;
+              margin-bottom: 0;
+              margin-top: 0;
+              box-sizing: border-box;
+              width: 100%;
+            }
+          }
+          .registerButton {
+            margin-top: 0;
+            font-size: 24px;
+            flex: 1;
+            height: 55px;
+            border-radius: 0;
+            .registerButton-icon {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

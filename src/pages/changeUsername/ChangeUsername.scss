@@ -1,0 +1,77 @@
+.usernamePage-wrapper {
+  background-color: #f3f3f3;
+  overflow: hidden;
+  .usernamePage {
+    position: relative;
+    top: 51px;
+    left: 0;
+    color: #333;
+    padding: 30px 51px 100px;
+
+    .usernamePage-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .usernamePage-form {
+      display: flex;
+      flex-direction: column;
+      input {
+        width: 100%;
+        max-width: 500px;
+        height: 50px;
+        box-sizing: border-box;
+        padding-left: 10px;
+        outline: none;
+        margin-bottom: 20px;
+        &:focus {
+          border: 1px solid #0080ff;
+        }
+      }
+      .usernamePage-button-wrapper {
+        display: flex;
+        flex-direction: row;
+        button {
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 30px;
+          border: none;
+          font-weight: 500;
+          border-radius: 2px;
+          box-shadow: 0 1px 0 rgb(0 0 0 / 20%);
+          cursor: pointer;
+          &:first-child {
+            margin-right: 10px;
+            color: white;
+            background-color: #0080ff;
+          }
+          &:last-child {
+            color: #333;
+            background-color: rgb(219, 219, 219);
+          }
+        }
+      }
+    }
+  }
+  .usernamePage-footer-wrapper {
+    border-top: 1px solid rgb(230, 230, 230);
+    position: relative;
+    box-sizing: border-box;
+    margin: 50px 0;
+    padding: 30px 4% 0;
+  }
+}
+@media (min-width: 768px) {
+  .usernamePage-wrapper {
+    .usernamePage {
+      margin: 0 auto;
+      padding-top: 60px;
+      max-width: 900px;
+    }
+    .usernamePage-footer-wrapper {
+      padding-top: 0;
+    }
+  }
+}

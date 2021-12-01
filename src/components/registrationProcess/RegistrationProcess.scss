@@ -1,0 +1,103 @@
+.registration {
+  .registration-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    z-index: 999;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    a {
+      display: flex;
+      align-items: center;
+      img {
+        height: 25px;
+      }
+    }
+    .registration-button {
+      border: none;
+      background-color: white;
+      color: inherit;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .registration-footer {
+    border-top: 1px solid rgb(196, 196, 196);
+    color: #757575;
+    font-size: 13px;
+    padding: 30px 0 20px 50px;
+    background-color: #f3f3f3;
+    .registration-footer-top {
+      font-size: 15px;
+      margin-bottom: 25px;
+      .registration-footer-top-link {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .registration-footer-links {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .registration-footer-container {
+        margin-bottom: 10px;
+        flex-basis: 50%;
+        .registration-footer-link {
+          display: block;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 576px) {
+  .registration {
+    .registration-header {
+      height: 70px;
+      padding: 0px 30px;
+      a {
+        img {
+          height: 40px;
+        }
+      }
+      .registration-button {
+        font-size: 20px;
+      }
+    }
+    .registration-footer {
+      .registration-footer-links {
+        .registration-footer-container {
+          flex-basis: 33%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .registration {
+    .registration-header {
+      height: 80px;
+      padding: 0px 50px;
+    }
+    .registration-footer {
+      padding: 50px 0 50px 70px;
+      .registration-footer-links {
+        max-width: 992px;
+        justify-content: flex-start;
+        .registration-footer-container {
+          flex-basis: 25%;
+        }
+      }
+    }
+  }
+}

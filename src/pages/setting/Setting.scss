@@ -1,0 +1,126 @@
+.settingPage-wrapper {
+  background-color: #f3f3f3;
+  overflow: hidden;
+  .settingPage {
+    position: relative;
+    top: 51px;
+    left: 0;
+    color: #333;
+    padding: 30px 51px 0;
+    .settingPage-top {
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .settingPage-top-title {
+        font-size: 24px;
+        color: inherit;
+        margin-right: 15px;
+      }
+      .settingPage-top-membersince {
+        img {
+          margin-right: 5px;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 12px !important;
+        font-weight: 600;
+        color: #555;
+      }
+    }
+    .settingPage-content-wrapper {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #999;
+      padding-top: 10px;
+      &:last-child {
+        .settingPage-content-section {
+          &:last-child {
+            .settingPage-content-account-info {
+              flex-direction: column;
+              align-items: flex-start;
+              .settingPage-content-account-info-right {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+      .settingPage-content-section {
+        margin-bottom: 20px;
+        .settingPage-content-title {
+          font-size: 18px;
+          font-weight: 500;
+          color: #757575;
+        }
+        .settingPage-content-button {
+          margin-top: 5px;
+          width: 200px;
+          padding: 8px 0;
+          border: none;
+          font-size: 13px;
+          background-color: #e6e6e6;
+          background-image: linear-gradient(to bottom, #e6e6e6, #ddd);
+          box-shadow: 0 1px 0 rgb(0 0 0 / 20%);
+          cursor: pointer;
+          &:hover {
+            background-image: linear-gradient(to bottom, #ececec, #e6e6e6);
+          }
+        }
+        .settingPage-content-account-info {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 15px;
+          margin-bottom: 10px;
+          .settingPage-content-account-info-left {
+            color: #757575;
+            &.email,
+            &.plan {
+              color: #333;
+              font-weight: 600;
+            }
+          }
+          .settingPage-content-account-info-right {
+            display: block;
+            text-decoration: none;
+            color: #0073e6;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .settingPage-footer-wrapper {
+    border-top: 1px solid rgb(230, 230, 230);
+    position: relative;
+    box-sizing: border-box;
+    margin: 50px 0;
+    padding: 30px 4% 0;
+  }
+}
+@media (min-width: 768px) {
+  .settingPage-wrapper {
+    .settingPage {
+      margin: 0 auto;
+      padding-top: 60px;
+      max-width: 900px;
+      .settingPage-top{
+        .settingPage-top-title{
+          font-size: 32px;
+        }
+      }
+      .settingPage-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+    }
+    .settingPage-footer-wrapper {
+      padding-top: 0;
+    }
+  }
+}
